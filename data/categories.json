@@ -1,0 +1,32 @@
+[
+  {
+    "id": "cat-1",
+    "name": "household",
+    "icon": "household"
+  },
+  {
+    "id": "cat-2",
+    "name": "services",
+    "icon": "services"
+  },
+  {
+    "id": "cat-3",
+    "name": "entertainment",
+    "icon": "entertainment"
+  },
+  {
+    "id": "cat-4",
+    "name": "fitness",
+    "icon": "fitness"
+  },
+  {
+    "id": "cat-5",
+    "name": "education",
+    "icon": "education"
+  },
+  {
+    "id": "cat-6",
+    "name": "food",
+    "icon": "food"
+  }
+]

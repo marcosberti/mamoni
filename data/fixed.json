@@ -1,0 +1,11 @@
+[
+  {
+    "id": "fix-1",
+    "title": "alquiler",
+    "description": "",
+    "beginDate": "1606791600000",
+    "endDate": "1701313200000",
+    "amount": 36300,
+    "accountId": "acc-1"
+  }
+]

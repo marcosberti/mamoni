@@ -1,0 +1,38 @@
+[
+  {
+    "id": "acc-1",
+    "name": "crocantes",
+    "balance": 10.0,
+    "currencyId": "curr-1",
+    "currency": "ARS",
+    "color": "blue",
+    "icon": "md/MdAttachMoney"
+  },
+  {
+    "id": "acc-2",
+    "name": "verrinis",
+    "balance": 100.32,
+    "currencyId": "curr-2",
+    "currency": "USD",
+    "color": "green",
+    "icon": "md/MdAttachMoney"
+  },
+  {
+    "id": "acc-3",
+    "name": "bitcoins",
+    "balance": 0,
+    "currencyId": "curr-3",
+    "currency": "BTC",
+    "color": "yellow",
+    "icon": "bs/BsCurrencyBitcoin"
+  },
+  {
+    "id": "acc-4",
+    "name": "este creo que no  va",
+    "balance": 0,
+    "currencyId": "curr-4",
+    "currency": "USD",
+    "color": "purple",
+    "icon": "md/MdAttachMoney"
+  }
+]

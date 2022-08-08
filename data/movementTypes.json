@@ -1,0 +1,18 @@
+[
+  {
+    "id": "movt-1",
+    "type": "installment"
+  },
+  {
+    "id": "movt-2",
+    "type": "fixed"
+  },
+  {
+    "id": "movt-3",
+    "type": "d2d"
+  },
+  {
+    "id": "movt-4",
+    "type": "income"
+  }
+]

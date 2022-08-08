@@ -1,0 +1,22 @@
+[
+  {
+    "id": "curr-1",
+    "code": "ARS",
+    "name": "Peso Argentino"
+  },
+  {
+    "id": "curr-2",
+    "code": "USD",
+    "name": "Dolar Estadounidense"
+  },
+  {
+    "id": "curr-3",
+    "code": "BTC",
+    "name": "Bitcoin"
+  },
+  {
+    "id": "curr-4",
+    "code": "USDT",
+    "name": "Tether USD"
+  }
+]
