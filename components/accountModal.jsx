@@ -1,11 +1,9 @@
 import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalCloseButton,
-  FormControl,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerHeader,
+  DrawerBody,
   FormLabel,
   FormErrorMessage,
   FormHelperText,
@@ -14,9 +12,12 @@ import {
   Button,
   Text,
   Flex,
-  Link
+  Link,
+  Icon
 } from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
+import { MdClose } from 'react-icons/md'
+import FormControl from './FormControl'
 import currencies from '../data/currencies.json'
 
 const COLORS = ['Red', 'Orange', 'Yellow', 'Green', 'Teal', 'Blue', 'Cyan', 'Purple', 'Pink']
@@ -30,26 +31,36 @@ const AccountModal = ({ isOpen, onClose, onSubmit }) => {
   }
 
   return (
-    <Modal isOpen={isOpen} onClose={handleClose} size='form'>
-      <ModalOverlay />
-      <ModalContent >
-        <ModalHeader borderBottom='1px solid' borderColor='gray.300'>
+    <Drawer isOpen={isOpen} onClose={handleClose} size={{base: 'full', lg: 'lg'}}>
+      <DrawerOverlay />
+      <DrawerContent >
+        <DrawerHeader borderBottom='1px solid' borderColor='gray.300'>
           <Flex align='center'>
-            New account
+            <Button
+              mt={1}
+              minW='auto'
+              variant='link'
+              onClick={handleClose}
+            >
+              <Icon as={MdClose} w={6} h={6} />
+            </Button>
+            <Text ml={2}>
+              New account
+            </Text>
             <Button
               ml='auto'
-              colorScheme='blue' 
+              colorScheme='green' 
               type='submit'
-              form='accoutnForm'
+              form='accoutn-form'
             >
               <Text fontSize='sm'>Create account</Text>
             </Button>
           </Flex>
-        </ModalHeader>
-        {/* <ModalCloseButton /> */}
+        </DrawerHeader>
+        {/* <DrawerCloseButton /> */}
 
-        <ModalBody>
-          <form id='accoutnForm' onSubmit={handleSubmit(onSubmit)}>
+        <DrawerBody>
+          <form id='accoutn-form' onSubmit={handleSubmit(onSubmit)}>
             <Flex gap='16px' mb='16px'>
               <FormControl flexBasis='50%' isInvalid={errors.name}>
                 <FormLabel fontSize='sm'>Name</FormLabel>
@@ -93,9 +104,9 @@ const AccountModal = ({ isOpen, onClose, onSubmit }) => {
               </FormControl>
             </Flex>
           </form>
-        </ModalBody>
-      </ModalContent>
-    </Modal>
+        </DrawerBody>
+      </DrawerContent>
+    </Drawer>
   )
 }
 

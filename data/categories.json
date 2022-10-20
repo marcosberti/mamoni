@@ -2,31 +2,43 @@
   {
     "id": "cat-1",
     "name": "household",
-    "icon": "household"
+    "icon": "bs/BsFillHouseFill",
+    "color": "blue"
   },
   {
     "id": "cat-2",
     "name": "services",
-    "icon": "services"
+    "icon": "md/MdElectricalServices",
+    "color": "red"
   },
   {
     "id": "cat-3",
     "name": "entertainment",
-    "icon": "entertainment"
+    "icon": "fa/FaGamepad",
+    "color": "orange"
   },
   {
     "id": "cat-4",
     "name": "fitness",
-    "icon": "fitness"
+    "icon": "fa/FaRunning",
+    "color": "yellow"
   },
   {
     "id": "cat-5",
     "name": "education",
-    "icon": "education"
+    "icon": "md/MdSchool",
+    "color": "teal"
   },
   {
     "id": "cat-6",
     "name": "food",
-    "icon": "food"
+    "icon": "md/MdLocalGroceryStore",
+    "color": "purple"
+  },
+  {
+    "id": "cat-7",
+    "name": "income",
+    "icon": "bi/BiMoney",
+    "color": "cyan"
   }
 ]

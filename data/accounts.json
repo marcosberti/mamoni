@@ -2,6 +2,7 @@
   {
     "id": "acc-1",
     "name": "crocantes",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi amet debitis expedita. Pariatur minima facere perferendis quia!",
     "balance": 10.0,
     "currencyId": "curr-1",
     "currency": "ARS",
@@ -11,6 +12,7 @@
   {
     "id": "acc-2",
     "name": "verrinis",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi amet debitis expedita. Pariatur minima facere perferendis quia!",
     "balance": 100.32,
     "currencyId": "curr-2",
     "currency": "USD",
@@ -20,6 +22,7 @@
   {
     "id": "acc-3",
     "name": "bitcoins",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi amet debitis expedita. Pariatur minima facere perferendis quia!",
     "balance": 0,
     "currencyId": "curr-3",
     "currency": "BTC",

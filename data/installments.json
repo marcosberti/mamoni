@@ -3,7 +3,7 @@
     "id": "ins-1",
     "title": "TV Samsung QLED",
     "description": "la tv palmundial",
-    "beginDate": "1654052400000",
+    "firstPaymentDate": "1654052400000",
     "installments": 12,
     "paidInstallments": 1,
     "amount": 15000,

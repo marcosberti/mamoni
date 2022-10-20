@@ -1,6 +1,9 @@
 import { ChakraProvider, extendTheme, Grid, GridItem } from '@chakra-ui/react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import 'reset-css'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
+
+const client = new QueryClient()
 
 const theme = extendTheme({
   colors: {
@@ -33,38 +36,37 @@ const theme = extendTheme({
     }
   },
   components: {
-    Modal: {
-      sizes: {
-        form: {
-          dialogContainer: {
-            height: '100vh',
-            justifyContent: 'flex-end',
-            overflow: 'hidden'
-          },
-          dialog: {
-            marginTop: '0',
-            height: '100vh',
-            maxWidth: 'var(--chakra-sizes-xl)'
-          }
-        }
+    FormLabel: {
+      baseStyle: {
+        px: '1',
+        bg: 'white',
+        left: '8px',
+        zIndex: '2',
+        top: '-10px',
+        fontSize: 'sm',
+        w: 'fit-content',
+        color: 'gray.700',
+        position: 'absolute',
       }
-    }
+    },
   }
 })
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
   return (
+    <QueryClientProvider client={client}>
     <ChakraProvider theme={theme}>
       <Grid templateColumns={{ base: '1fr', lg: '80px auto' }} templateRows='150px auto' h='100vh' color='gray.600'>
         <GridItem rowSpan={2} colSpan={1} display={{ base: 'none', lg: 'revert'}}>
           <Navbar />
         </GridItem>
-        <GridItem rowSpan={1} colSpan={1}></GridItem>
+        <GridItem rowSpan={1} colSpan={1} />
         <GridItem rowSpan={1} colSpan={1} overflow='hidden' px='64px' overflowY='auto' >
           <Component {...pageProps} />
         </GridItem>
       </Grid>
     </ChakraProvider>
+    </QueryClientProvider>
   )
 }
 

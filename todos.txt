@@ -1,0 +1,11 @@
+create movement modal
+edit movement modal
+delete movement modal
+user avatar
+header -> in account 'this are your accounts' of similiar, with a desc???
+header -> in account/[id] show title and description of acc
+date filters in accounts/[id]
+graphs in index
+crud currency
+crud installments
+crud fixed expenses

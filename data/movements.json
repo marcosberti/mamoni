@@ -48,7 +48,7 @@
     "accountId": "acc-1",
     "currencyId": null,
     "movementTypeId": "movt-1",
-    "categoryId": "cat-3",
+    "categoryId": "cat-1",
     "notes": null
   },
   {
@@ -61,7 +61,7 @@
     "accountId": "acc-1",
     "currencyId": null,
     "movementTypeId": "movt-1",
-    "categoryId": "cat-3",
+    "categoryId": "cat-1",
     "notes": null
   },
   {
@@ -74,7 +74,7 @@
     "accountId": "acc-1",
     "currencyId": null,
     "movementTypeId": "movt-1",
-    "categoryId": "cat-3",
+    "categoryId": "cat-2",
     "notes": null
   },
   {
@@ -100,7 +100,7 @@
     "accountId": "acc-1",
     "currencyId": null,
     "movementTypeId": "movt-1",
-    "categoryId": "cat-3",
+    "categoryId": "cat-4",
     "notes": null
   },
   {
@@ -113,7 +113,7 @@
     "accountId": "acc-1",
     "currencyId": null,
     "movementTypeId": "movt-1",
-    "categoryId": "cat-3",
+    "categoryId": "cat-4",
     "notes": null
   }
 ]

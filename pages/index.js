@@ -1,42 +1,32 @@
-import { Flex, Box, Text, Button, List, ListItem, Skeleton, useDisclosure } from '@chakra-ui/react'
-import AccountCards from '../components/accountCards'
-import AccountModal from '../components/accountModal'
+import { Flex, Box, Text, List, ListItem, Skeleton } from '@chakra-ui/react'
+import Card from '../components/Card'
+import accounts from '../data/accounts.json'
 import movements from '../data/movements.json'
 import { formatCurrency } from '../lib/formatters'
 
-export default function Home() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  
-  const onSubmit = (values) => {
-    console.log('submit', values);
-  }
-
+const Home = () => {
   return (
     <>
-      <AccountModal isOpen={isOpen} onClose={onClose} onSubmit={onSubmit} />
       <Flex align='center' mb='16px'>
         <Text fontSize='lg' fontWeight='bold' casing='uppercase' letterSpacing='2px'>
           Your accounts
         </Text>
-        <Button 
-          ml='auto' 
-          opacity='0.75'
-          variant='outline'
-          colorScheme='blue' 
-          title='Add new account'
-          sx={{
-            '_hover': {
-              opacity: '1'
-            }
-          }}
-          onClick={onOpen}
-        >
-          <Text fontSize='sm'>
-            New account
-          </Text>
-        </Button>
       </Flex>
-      <AccountCards />
+      <Flex gap='24px' overflowX='auto' scrollSnapType='x mandatory'>
+        {accounts.map(account => (
+          <Card 
+            key={account.id}
+            id={account.id}
+            name={account.name}
+            amount={account.balance}
+            currency={account.currency}
+            color={account.color}
+            icon={account.icon}
+            linkTo='accounts'
+            linkToLabel='account'
+          />
+        ))}
+      </Flex>
       <Box mb='64px' />
       <Flex gap='64px'>
         <Box flexBasis='50%'>
@@ -69,3 +59,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

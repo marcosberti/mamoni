@@ -19,14 +19,14 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
     'no-param-reassign': 'off',
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    // 'import/extensions': [
+    //   'error',
+    //   'ignorePackages',
+    //   {
+    //     ts: 'never',
+    //     tsx: 'never',
+    //   },
+    // ],
     'consistent-return': 'off',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
@@ -38,6 +38,6 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
-    'prettier/prettier': 'warn',
+    // 'prettier/prettier': 'warn',
   },
 }

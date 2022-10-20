@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { Flex } from '@chakra-ui/react'
-import Link from 'next/link'
-import DynamicIcon from './dynamicIcon'
+import SafeLink from './SafeLink'
+import DinamicIcon from './DinamicIcon'
 
 const routes = [
   {
@@ -21,6 +21,11 @@ const routes = [
   },
 ]
 
+const getIsActiveRoute = (path, routerPath) => {
+  const isIndex = path === '/'
+  return path === routerPath || (!isIndex && routerPath.includes(path))
+}
+
 const Navbar = () => {
   const router = useRouter()
 
@@ -32,27 +37,25 @@ const Navbar = () => {
       borderRight='1px solid' 
       borderColor='gray.300'
     >
-      {routes.map((route, index) => (
-        <Link key={index} href={route.to} >
-          <a>
-            <Flex 
-              title={`Go to ${route.title}`}
-              px='8px'
-              py='16px'
-              justify='center' 
-              align='center' 
-              opacity='0.75' 
-              bg={router.pathname === route.to ? 'blue.50' : 'inherit'}
-              sx={{
-                '_hover': {
-                  opacity: '1'
-                }
-              }}
-            >
-              <DynamicIcon name={route.icon} fill={router.pathname === route.to ? 'black' : 'inherit'}/>
-            </Flex>
-          </a>
-        </Link>
+      {routes.map((route) => (
+        <SafeLink key={route.to} href={route.to} >
+          <Flex 
+            title={`Go to ${route.title}`}
+            px='8px'
+            py='16px'
+            justify='center' 
+            align='center' 
+            opacity='0.75' 
+            bg={getIsActiveRoute(route.to, router.pathname) ? 'green.50' : 'inherit'}
+            sx={{
+              '_hover': {
+                opacity: '1'
+              }
+            }}
+          >
+            <DinamicIcon name={route.icon} fill={getIsActiveRoute(route.to, router.pathname) ? 'black' : 'inherit'}/>
+          </Flex>
+        </SafeLink>
       ))}
     </Flex> 
   )
