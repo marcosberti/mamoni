@@ -49,7 +49,6 @@ const Accounts = ({ accounts }) => {
         <Button 
           opacity='0.75'
           variant='outline'
-          colorScheme='green' 
           title='Add new account'
           sx={{
             '_hover': {

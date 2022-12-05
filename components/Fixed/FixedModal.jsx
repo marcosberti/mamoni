@@ -15,10 +15,13 @@ import {
 } from '@chakra-ui/react'
 import { useForm } from "react-hook-form"
 import { MdClose } from 'react-icons/md'
-import FormControl from './FormControl'
+import { getDefaultFixed } from '../../lib/settings'
+import FormControl from '../FormControl'
 
-const FixedModal = ({ accounts, isOpen, onClose, onSubmit }) => {
-  const { register, reset, handleSubmit, formState: { errors } } = useForm()
+const FixedModal = ({ accounts, item, isOpen, onClose, onSubmit }) => {
+  const { register, reset, handleSubmit, formState: { errors } } = useForm({
+    defaultValues: getDefaultFixed(item)
+  })
   
   const handleClose = () => {
     reset()
@@ -44,7 +47,6 @@ const FixedModal = ({ accounts, isOpen, onClose, onSubmit }) => {
             </Text>
             <Button
               ml='auto'
-              colorScheme='green' 
               type='submit'
               form='fixed-form'
             >
@@ -92,15 +94,24 @@ const FixedModal = ({ accounts, isOpen, onClose, onSubmit }) => {
                   <FormErrorMessage>{errors.amount.message}</FormErrorMessage>
                 ) : null}
               </FormControl>
-              <FormControl flexBasis='50%' isInvalid={errors?.account}>
+              <FormControl flexBasis='50%' isInvalid={errors?.accountId}>
                 <FormLabel>Account</FormLabel>
-                <Select borderColor='gray.400' {...register('account', {required: 'This field is required'})}>
+                <Select borderColor='gray.400' {...register('accountId', {
+                  validate: value => {
+                    if (value === 'default') {
+                      return 'This field is required'
+                    }
+
+                    return null
+                  }})}
+                >
+                  <option value="default">Select an account</option>
                   {accounts.map(a => (
                     <option key={a.id} value={a.id}>{a.name}</option>
                   ))}
                 </Select>
-                {errors?.account ? (
-                  <FormErrorMessage>{errors.account.message}</FormErrorMessage>
+                {errors?.accountId ? (
+                  <FormErrorMessage>{errors.accountId.message}</FormErrorMessage>
                 ) : null}
               </FormControl>
             </Flex>

@@ -20,8 +20,6 @@ const ConfirmModal = ({isOpen, title, text, onConfirm, onCancel}) => (
       </ModalBody>
       <ModalFooter>
         <Button
-          variant='solid'
-          colorScheme='green'
           fontSize='sm'
           onClick={onConfirm}
         >
@@ -30,7 +28,6 @@ const ConfirmModal = ({isOpen, title, text, onConfirm, onCancel}) => (
         <Button
           ml={2}
           variant='outline'
-          colorScheme='green'
           fontSize='sm'
           onClick={onCancel}
         >

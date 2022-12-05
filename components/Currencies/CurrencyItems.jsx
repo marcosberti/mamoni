@@ -1,8 +1,7 @@
 import { Td, Tr } from "@chakra-ui/react"
 import DotMenu from '../DotMenu'
-import { SETTING_TYPES } from "../../lib/settings"
 
-const CurrencyItems = ({currency, onEdit, onDelete}) => (
+const CurrencyItems = ({item, onEdit, onDelete}) => (
   <Tr
     sx={{
       ':hover': {
@@ -10,12 +9,11 @@ const CurrencyItems = ({currency, onEdit, onDelete}) => (
       }
     }}
   >
-    <Td>{currency.name}</Td>
-    <Td>{currency.code}</Td>
+    <Td>{item.name}</Td>
+    <Td>{item.code}</Td>
     <Td w='50px'>
       <DotMenu
-        data={currency}
-        type={SETTING_TYPES.currency}
+        data={item}
         onEdit={onEdit}
         onDelete={onDelete}
       />

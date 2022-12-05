@@ -3,9 +3,7 @@ import Link from 'next/link'
 
 const SafeLink = ({href, children}) => (
   <Link href={href}>
-    <a>
-      {children}
-    </a>
+    {children}
   </Link>
 )
 

@@ -13,6 +13,10 @@
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@loadable/component": "^5.15.2",
+    "@supabase/auth-helpers-nextjs": "^0.5.2",
+    "@supabase/auth-helpers-react": "^0.3.1",
+    "@supabase/auth-ui-react": "^0.2.6",
+    "@supabase/supabase-js": "^2.1.1",
     "@tanstack/react-query": "^4.12.0",
     "framer-motion": "^6.5.1",
     "next": "12.2.4",
@@ -20,7 +24,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.34.0",
     "react-icons": "^4.4.0",
-    "reset-css": "^5.0.1"
+    "reset-css": "^5.0.1",
+    "superjson": "^1.11.0"
   },
   "devDependencies": {
     "babel-plugin-superjson-next": "^0.4.2",

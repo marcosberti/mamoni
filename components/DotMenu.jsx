@@ -1,7 +1,7 @@
 import { Button, Icon, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
 import { MdMoreVert } from "react-icons/md"
 
-const DotMenu = ({data, type, onEdit, onDelete}) => (
+const DotMenu = ({data, onEdit, onDelete}) => (
   <Menu>
     <MenuButton
       variant='ghost'
@@ -20,13 +20,13 @@ const DotMenu = ({data, type, onEdit, onDelete}) => (
     <MenuList boxShadow='md' py='0' minW='100px'>
       <MenuItem
         p={4}
-        onClick={() => onEdit(data, type)}
+        onClick={() => onEdit(data)}
       >
         Edit
       </MenuItem>
       <MenuItem
         p={4}
-        onClick={() => onDelete(data, type)}
+        onClick={() => onDelete(data)}
       >
         Delete
       </MenuItem>

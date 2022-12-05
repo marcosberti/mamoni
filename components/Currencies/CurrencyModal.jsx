@@ -14,10 +14,13 @@ import {
 } from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
 import { MdClose } from 'react-icons/md'
+import { getDefaultCurrency } from '../../lib/settings'
 import FormControl from '../FormControl'
 
-const CurrencyModal = ({isOpen, onClose, onSubmit}) => {
-  const { register, reset, handleSubmit, formState: {errors} } = useForm()
+const CurrencyModal = ({ isOpen, item, onClose, onSubmit }) => {
+  const { register, reset, handleSubmit, formState: { errors } } = useForm({
+    defaultValues: getDefaultCurrency(item)
+  })
   
   const handleClose = () => {
     reset()
@@ -43,7 +46,6 @@ const CurrencyModal = ({isOpen, onClose, onSubmit}) => {
             </Text>
             <Button
               ml='auto'
-              colorScheme='green' 
               type='submit'
               form='currency-form'
             >

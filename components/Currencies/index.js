@@ -1,3 +1,9 @@
-import Currencies from './Currencies'
+import CurrencyHeaders from './CurrencyHeaders'
+import CurrencyItems from './CurrencyItems'
+import CurrencyModal from './CurrencyModal'
 
-export default Currencies
+export {
+  CurrencyHeaders,
+  CurrencyItems,
+  CurrencyModal,
+}

@@ -49,7 +49,6 @@ const AccountModal = ({ isOpen, onClose, onSubmit }) => {
             </Text>
             <Button
               ml='auto'
-              colorScheme='green' 
               type='submit'
               form='accoutn-form'
             >

@@ -6,7 +6,17 @@
     "firstPaymentDate": "1654052400000",
     "installments": 12,
     "paidInstallments": 1,
-    "amount": 15000,
+    "amount": 186000,
     "accountId": "acc-1"
+  },
+  {
+    "id": "ins-2",
+    "title": "BT Keyboard",
+    "description": "el royal kludge",
+    "firstPaymentDate": "1654052400000",
+    "installments": 3,
+    "paidInstallments": 1,
+    "amount": 18000,
+    "accountId": "acc-2"
   }
 ]
